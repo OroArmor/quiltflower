@@ -836,6 +836,10 @@ public class InvocationExprent extends Exprent {
         if (buff.length() > 0) {
           if (!firstParameter) {
             buf.append(", ");
+            if (parameters.size() - start > 5) {
+              buf.appendLineSeparator();
+              buf.appendIndent(indent + 1);
+            }
           }
           buf.append(buff);
         }
